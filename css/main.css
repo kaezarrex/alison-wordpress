@@ -1,12 +1,67 @@
 header {
-    display:block;
+    display: block;
 }
+
 nav {
-    display:block;
+    display: block;
 }
+
+a {
+    text-decoration: none;
+}
+
+ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 #top-header {
     margin-left: 270px;
 }
+
 .nav-menu li {
     text-transform: uppercase;
+}
+
+.nav-menu-item {
+    position: relative;
+    left: 100px;
+    top: 5px;
+    margin-left: 10px;
+    font-family: 'Terminal Dosis Light', sans-serif;
+    color: white;
+    font-size: 28px;
+    width: 0px;
+    -webkit-transform: skewX(5deg) skewY(2deg);
+    -moz-transform: skewX(5deg) skewY(2deg);
+    -o-transform: skewX(5deg) skewY(2deg);
+}
+
+.nav-menu > li > a {
+    display: block;
+    position: relative;
+    left: -100px;
+    background-color: #95CEC7;
+    width: 300px;
+    height: 50px;
+    margin: 10px;
+    padding: 3px;
+    -webkit-transform: skewX(-5deg) skewY(-2deg);
+    -moz-transform: skewX(-5deg) skewY(-2deg);
+    -o-transform: skewX(-5deg) skewY(-2deg);
+    -moz-box-shadow: 3px 3px 5px #ccc;
+    -webkit-box-shadow: 3px 3px 5px #ccc;
+    box-shadow: 3px 3px 5px #ccc;
+}
+
+.nav-sub-menu {
+    font-size: 13px;
+    font-style: italic;
+    margin-left: 50px;
+}
+
+.nav-sub-menu > li > a {
+    color: #666666;
 }
