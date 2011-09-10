@@ -1,6 +1,12 @@
 header {
     display:block;
 }
+nav {
+    display:block;
+}
 #top-header {
     margin-left: 270px;
+}
+.nav-menu li {
+    text-transform: uppercase;
 }
