@@ -4,10 +4,33 @@ header {
 
 nav {
     display: block;
+    float: left;
+}
+
+section {
+    display: block;
+}
+
+article {
+    display: block;
+}
+
+footer {
+    display: block;
+}
+
+h1 {
+    font-family: 'Terminal Dosis Light', sans-serif;
+    font-size: 64px;
+    text-transform: uppercase;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    margin-left: 50px;
 }
 
 a {
     text-decoration: none;
+    color: #555555;
 }
 
 ul
@@ -19,6 +42,29 @@ ul
 
 #top-header {
     margin-left: 270px;
+}
+
+#content {
+    padding-top: 30px;
+    background-image: url(../images/background.png);
+}
+
+#posts {
+    margin-left: 350px;
+    width: 700px;
+}
+
+#posts article {
+    background-color: white;
+}
+
+#posts article section {
+    margin-left: 120px;
+}
+
+#posts p {
+    font-size: 18px;
+    color: #555555;
 }
 
 .nav-menu li {
@@ -64,4 +110,24 @@ ul
 
 .nav-sub-menu > li > a {
     color: #666666;
+}
+
+.date {
+    font-family: 'Terminal Dosis Light', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.date .month {
+    color: #999999;
+}
+
+.badge {
+    display: inline-block;
+    background-image: url(../images/badge.png);
+    color: white;
+    width: 47px;
+    height: 43px;
+    padding-top: 4px;
+    text-align: center;
 }
