@@ -33,8 +33,7 @@ a {
     color: #555555;
 }
 
-ul
-{
+ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -51,11 +50,12 @@ ul
 
 #posts {
     margin-left: 350px;
-    width: 700px;
+    width: 740px;
 }
 
 #posts article {
     background-color: white;
+    padding: 20px;
 }
 
 #posts article section {
@@ -63,6 +63,7 @@ ul
 }
 
 #posts p {
+    margin-bottom: 30px;
     font-size: 18px;
     color: #555555;
 }
