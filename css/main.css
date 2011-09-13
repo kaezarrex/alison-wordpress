@@ -39,6 +39,19 @@ ul {
     margin: 0;
 }
 
+footer dl dt {
+    color: #95CEC7;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer dl dd {
+    color: #555555;
+    font-size: 14px;
+    font-style: italic;
+}
+
 #top-header {
     margin-left: 270px;
 }
