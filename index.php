@@ -16,9 +16,8 @@
                 <article id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
                     <header>
                         <div class="date">
-                            <span class="badge">16</span>
-                            <span class="month">Aug</span>
-                            <?php unset($previousday); printf( __( '%1$s &#8211; %2$s', 'sandbox' ), the_date( '', '', '', false ), get_the_time() ) ?>
+                            <span class="badge"><?php the_time('j') ?></span>
+                            <span class="month"><?php the_time('M') ?> &#8211; <?php the_time() ?></span>
                         </div>
                         <h1>
                             <a href="<?php the_permalink() ?>" title="<?php printf( __('Permalink to %s', 'sandbox'), the_title_attribute('echo=0') ) ?>" rel="bookmark">
@@ -39,13 +38,12 @@
                         <div class="slash"></div>
                         <section>
                             <h2>Categories</h2>
-                            <h3><?php get_the_category_list(', ') ?></h3>
+                            <h3><?php echo(get_the_category_list(', ')) ?></h3>
                         </section>
                         <div class="slash"></div>
                         <section>
                             <h2>Author</h2>
-                            <h3><?php get_the_author() ?></h3>
-                        </section>
+                            <h3><?php echo(get_the_author()) ?></h3>
                         </section>
                     </footer>
                 </article>
