@@ -12,19 +12,3 @@
                     <li><a href="#"><div class="nav-menu-item">Newsletter</div></a></li>
                 </ul>
             </nav>
-
-            <div id="secondary" class="sidebar">
-                <ul class="xoxo">
-
-                    <li id="meta">
-                        <h3><?php _e( 'Meta', 'sandbox' ) ?></h3>
-                        <ul>
-                            <?php wp_register() ?>
-
-                            <li><?php wp_loginout() ?></li>
-                            <?php wp_meta() ?>
-
-                        </ul>
-                    </li>
-                </ul>
-            </div><!-- #secondary .sidebar -->

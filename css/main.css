@@ -1,3 +1,32 @@
+
+@font-face {
+    font-family: 'OstrichSansBlack';
+    src: url('fonts/ostrich/ostrich-black-webfont.eot');
+    src: url('fonts/ostrich/ostrich-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ostrich/ostrich-black-webfont.woff') format('woff'),
+         url('fonts/ostrich/ostrich-black-webfont.ttf') format('truetype'),
+         url('fonts/ostrich/ostrich-black-webfont.svg#OstrichSansBlack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OstrichSansRoundedMedium';
+    src: url('fonts/ostrich/ostrich-rounded-webfont.eot');
+    src: url('fonts/ostrich/ostrich-rounded-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ostrich/ostrich-rounded-webfont.woff') format('woff'),
+         url('fonts/ostrich/ostrich-rounded-webfont.ttf') format('truetype'),
+         url('fonts/ostrich/ostrich-rounded-webfont.svg#OstrichSansRoundedMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    font-family: 'Gentium Basic', serif;
+}
+
 header {
     display: block;
 }
@@ -20,8 +49,9 @@ footer {
 }
 
 h1 {
-    font-family: 'Terminal Dosis Light', sans-serif;
+    font-family: 'OstrichSansBlack', sans-serif;
     font-size: 64px;
+    font-weight: normal;
     text-transform: uppercase;
     margin-top: 8px;
     margin-bottom: 20px;
@@ -95,6 +125,10 @@ ul {
     color: #555555;
 }
 
+#main-footer {
+    text-align: center;
+}
+
 .nav-menu li {
     text-transform: uppercase;
 }
@@ -102,11 +136,11 @@ ul {
 .nav-menu-item {
     position: relative;
     left: 100px;
-    top: 5px;
+    top: 9px;
     margin-left: 10px;
-    font-family: 'Terminal Dosis Light', sans-serif;
+    font-family: 'OstrichSansRoundedMedium', sans-serif;
     color: white;
-    font-size: 28px;
+    font-size: 32px;
     width: 0px;
     -webkit-transform: skewX(5deg) skewY(2deg);
     -moz-transform: skewX(5deg) skewY(2deg);
@@ -141,9 +175,10 @@ ul {
 }
 
 .date {
-    font-family: 'Terminal Dosis Light', sans-serif;
-    font-size: 32px;
-    font-weight: bold;
+    font-family: 'OstrichSansBlack', sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 48px;
 }
 
 .date .month {
@@ -165,4 +200,13 @@ ul {
     width: 24px;
     height: 59px;
     background-image: url(../images/slash.png);
+}
+
+.sidebar {
+    position: fixed;
+    right: 10px;
+    top: 40px;
+    border: 1px solid #AAA;
+    padding: 5px;
+    background-color: white;
 }
