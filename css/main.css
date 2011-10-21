@@ -86,7 +86,8 @@ ul {
 }
 
 #top-header {
-    margin-left: 270px;
+    width: 646px;
+    margin: auto;
 }
 
 #content {
@@ -96,8 +97,8 @@ ul {
 }
 
 #posts {
-    margin-left: 350px;
     width: 740px;
+    margin: auto;
 }
 
 #posts article {
