@@ -25,6 +25,7 @@
 
 body {
     font-family: 'Gentium Basic', serif;
+    margin: 0px;
 }
 
 header {
@@ -86,6 +87,33 @@ ul {
     margin: 0;
 }
 
+form {
+    text-align: right;
+}
+
+input {
+    display: block;
+}
+
+input.text {
+    font-family: 'Gentium Basic', serif;
+    font-size: 14px;
+    border: none;
+    width: 135px;
+    height: 20px;
+}
+
+input.button {
+    font-family: 'OstrichSansBlack', sans-serif;
+    font-size: 24px;
+    margin: 5px 0 0 110px;
+    padding: 0px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
 #top-header {
     width: 646px;
     margin: auto;
@@ -128,7 +156,41 @@ ul {
 }
 
 #main-footer {
+    background-color: #95CEC7;
     text-align: center;
+    color: white;
+}
+
+#main-footer section {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    font-family: 'OstrichSansBlack', sans-serif;
+    font-size: 24px;
+    margin: 20px;
+}
+
+#main-footer a {
+    color: white;
+}
+
+#main-footer h1 {
+    font-size: 56px;
+    color: #8C9096;
+    margin: 0 0 5px 0;
+}
+
+#main-footer li {
+    padding: 2px;
+}
+
+#main-footer h1.yellow {
+    color: #FAFF69;
+}
+
+#contact {
+    font-family: 'Gentium Basic', serif;
+    font-size: 14px;
 }
 
 .nav-menu li {
