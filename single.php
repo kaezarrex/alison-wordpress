@@ -1,17 +1,17 @@
-    <?php get_header() ?>
+<?php get_header() ?>
 
         <div id="content">
 
-            <?php get_sidebar() ?>
+        <?php get_sidebar() ?>
+
+        <?php the_post() ?>
 
             <div id="nav-above" class="navigation">
-                <div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'sandbox' )) ?></div>
-                <div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'sandbox' )) ?></div>
+                <div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">&laquo;</span> %title' ) ?></div>
+                <div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">&raquo;</span>' ) ?></div>
             </div>
 
             <section id="posts">
-
-            <?php while ( have_posts() ) : the_post() ?>
 
                 <article id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
                     <header>
@@ -19,14 +19,10 @@
                             <span class="badge"><?php the_time('j') ?></span>
                             <span class="month"><?php the_time('M') ?> &#8211; <?php the_time() ?></span>
                         </div>
-                        <h1>
-                            <a href="<?php the_permalink() ?>" title="<?php printf( __('Permalink to %s', 'sandbox'), the_title_attribute('echo=0') ) ?>" rel="bookmark">
-                                <?php the_title() ?>
-                            </a>
-                        </h1>
+                        <h1 class="entry-title"><?php the_title() ?></h1>
                     </header>
                     <section>
-                        <?php the_content( __( 'Read More <span class="meta-nav">&raquo;</span>', 'sandbox' ) ) ?>
+                        <?php the_content() ?>
                         <?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'sandbox' ) . '&after=</div>') ?>
                     </section>
                     <footer>
@@ -46,17 +42,18 @@
                             <h3><?php echo(get_the_author()) ?></h3>
                         </section>
                     </footer>
+            <?php comments_template() ?>
                 </article>
-
-            <?php endwhile; ?>
 
             </section>
 
             <div id="nav-below" class="navigation">
-                <div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'sandbox' )) ?></div>
-                <div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'sandbox' )) ?></div>
+                <div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">&laquo;</span> %title' ) ?></div>
+                <div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">&raquo;</span>' ) ?></div>
             </div>
 
-    </div><!-- #content -->
+
+        </div><!-- #content -->
+    </div><!-- #container -->
 
 <?php get_footer() ?>
