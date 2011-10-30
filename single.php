@@ -42,7 +42,6 @@
                             <h3><?php echo(get_the_author()) ?></h3>
                         </section>
                     </footer>
-            <?php comments_template() ?>
                 </article>
 
             </section>
@@ -52,6 +51,7 @@
                 <div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">&raquo;</span>' ) ?></div>
             </div>
 
+<?php comments_template() ?>
 
         </div><!-- #content -->
     </div><!-- #container -->
