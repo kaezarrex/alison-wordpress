@@ -125,7 +125,7 @@ ul {
 
 #posts p {
     margin-bottom: 30px;
-    font-size: 18px;
+    font-size: 17px;
     color: #555555;
 }
 
@@ -340,4 +340,36 @@ ul {
     font-size: 16px;
     font-style: italic;
     color: #999;
+}
+
+.navigation {
+    background-color: white;
+    width: 740px;
+    margin: auto;
+    padding: 10px 10px 0 10px;
+}
+
+.navigation a {
+    font-family: 'OstrichSansBlack', sans-serif;
+    text-transform: uppercase;
+    color: #95CEC7;
+    margin: 4px;
+    font-size: 18px;
+}
+
+.nav-next,
+.nav-previous {
+    display: inline-block;
+}
+
+.nav-next {
+    float: right;
+}
+
+.nav-previous:before {
+    content: url(../images/green-arrow-left.png);
+}
+
+.nav-next:after {
+    content: url(../images/green-arrow-right.png);
 }

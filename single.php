@@ -7,8 +7,8 @@
         <?php the_post() ?>
 
             <div id="nav-above" class="navigation">
-                <div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">&laquo;</span> %title' ) ?></div>
-                <div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">&raquo;</span>' ) ?></div>
+                <?php previous_post_link( '%link', '<div class="nav-previous">%title</div>' ) ?>
+                <?php next_post_link( '%link', '<div class="nav-next">%title</div>' ) ?>
             </div>
 
             <section id="posts">
@@ -47,8 +47,8 @@
             </section>
 
             <div id="nav-below" class="navigation">
-                <div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">&laquo;</span> %title' ) ?></div>
-                <div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">&raquo;</span>' ) ?></div>
+                <?php previous_post_link( '%link', '<div class="nav-previous">%title</div>' ) ?>
+                <?php next_post_link( '%link', '<div class="nav-next">%title</div>' ) ?>
             </div>
 
 <?php comments_template() ?>
