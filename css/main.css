@@ -235,6 +235,10 @@ input.text {
     padding: 0px;
 }
 
+.nav-menu {
+    width: 280px;
+}
+
 .nav-menu li {
     text-transform: uppercase;
 }
