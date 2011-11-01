@@ -202,11 +202,12 @@ ul {
     background-color: white;
 }
 
-#comments textarea,
-#comments input.text {
+textarea,
+input.text {
     border: 1px solid #95CEC7;
     font-family: 'Gentium Basic', serif;
     font-size: 18px;
+    padding: 5px 5px 0 5px;
     color: #555;
 }
 
@@ -223,7 +224,7 @@ ul {
     text-transform: uppercase;
 }
 
-#commentform .button {
+.button {
     font-family: 'OstrichSansBlack', sans-serif;
     color: #555;
     border: none;
