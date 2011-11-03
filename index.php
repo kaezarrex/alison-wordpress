@@ -4,10 +4,10 @@
 
             <?php get_sidebar() ?>
 
-            <div id="nav-above" class="navigation">
-                <div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'sandbox' )) ?></div>
-                <div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'sandbox' )) ?></div>
-            </div>
+            <section id="main-nav-above" class="navigation">
+                <?php next_posts_link(__( '<div class="nav-previous">Older</div>', 'sandbox' )) ?>
+                <?php previous_posts_link(__( '<div class="nav-next">Newer</div>', 'sandbox' )) ?>
+            </section>
 
             <section id="posts">
 
@@ -52,10 +52,10 @@
 
             </section>
 
-            <div id="nav-below" class="navigation">
-                <div class="nav-previous"><?php next_posts_link(__( '<span class="meta-nav">&laquo;</span> Older posts', 'sandbox' )) ?></div>
-                <div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">&raquo;</span>', 'sandbox' )) ?></div>
-            </div>
+            <section id="main-nav-below" class="navigation">
+                <?php next_posts_link(__( '<div class="nav-previous">Older</div>', 'sandbox' )) ?>
+                <?php previous_posts_link(__( '<div class="nav-next">Newer</div>', 'sandbox' )) ?>
+            </section>
 
     </div><!-- #content -->
 

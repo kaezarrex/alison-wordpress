@@ -347,19 +347,68 @@ input.text {
     color: #999;
 }
 
+#main-nav-above,
+#main-nav-below {
+    padding: 10px 10px 0 10px;
+}
+
+#main-nav-above a,
+#main-nav-below a {
+    color: #555;
+    margin: 4px;
+    font-size: 28px;
+}
+
+#main-nav-above .nav-previous:before,
+#main-nav-below .nav-previous:before,
+#main-nav-above .nav-previous:after,
+#main-nav-below .nav-previous:after {
+    content: url(../images/black-arrow-left.png);
+    margin: 5px;
+}
+
+#main-nav-above .nav-next:before,
+#main-nav-below .nav-next:before,
+#main-nav-above .nav-next:after,
+#main-nav-below .nav-next:after {
+    content: url(../images/black-arrow-right.png);
+    margin: 5px;
+}
+
+#nav-above,
+#nav-below {
+    padding: 10px 10px 0 10px;
+}
+
+#nav-above a,
+#nav-below a {
+    color: #95CEC7;
+    margin: 4px;
+    font-size: 18px;
+}
+
+#nav-above .nav-previous:before,
+#nav-below .nav-previous:before {
+    content: url(../images/green-arrow-left.png);
+    margin: 5px;
+}
+
+#nav-above .nav-next:after,
+#nav-below .nav-next:after {
+    content: url(../images/green-arrow-right.png);
+    margin: 5px;
+}
+
 .navigation {
     background-color: white;
     width: 740px;
     margin: auto;
-    padding: 10px 10px 0 10px;
+
 }
 
 .navigation a {
     font-family: 'OstrichSansBlack', sans-serif;
     text-transform: uppercase;
-    color: #95CEC7;
-    margin: 4px;
-    font-size: 18px;
 }
 
 .nav-next,
@@ -369,12 +418,4 @@ input.text {
 
 .nav-next {
     float: right;
-}
-
-.nav-previous:before {
-    content: url(../images/green-arrow-left.png);
-}
-
-.nav-next:after {
-    content: url(../images/green-arrow-right.png);
 }
