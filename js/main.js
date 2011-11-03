@@ -8,9 +8,9 @@ $(function(){
     });
 
     // Setup sub-menu show/hide
-    $('.nav-sub-menu').parent().click(function(event) {
+    $('.nav-sub-menu').siblings().click(function(event) {
         event.preventDefault();
-        $(this).children('.nav-sub-menu').slideToggle();
+        $(this).siblings('.nav-sub-menu').slideToggle();
     });
     $('.nav-sub-menu').hide();
 
