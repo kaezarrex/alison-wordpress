@@ -129,6 +129,12 @@ ul {
     color: #555555;
 }
 
+#posts p a ,
+#login a {
+    color: #95CEC7;
+    text-decoration: underline;
+}
+
 #main-footer {
     background-color: #95CEC7;
     text-align: center;
