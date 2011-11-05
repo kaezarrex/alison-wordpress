@@ -135,6 +135,11 @@ ul {
     text-decoration: underline;
 }
 
+#posts article img {
+    display: block;
+    margin: auto;
+}
+
 #main-footer {
     background-color: #95CEC7;
     text-align: center;
