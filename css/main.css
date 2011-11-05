@@ -52,11 +52,11 @@ footer {
 
 h1 {
     font-family: 'OstrichSansBlack', sans-serif;
-    font-size: 64px;
+    font-size: 52px;
     font-weight: normal;
     text-transform: uppercase;
     color: #555;
-    margin-top: 8px;
+    margin-top: 0px;
     margin-bottom: 20px;
     margin-left: 50px;
 }
@@ -296,7 +296,7 @@ input.text {
 
 .date {
     font-family: 'OstrichSansBlack', sans-serif;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: normal;
     line-height: 48px;
 }
