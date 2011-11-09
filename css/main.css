@@ -236,6 +236,10 @@ input.text {
     text-transform: uppercase;
 }
 
+#social {
+    margin-left: 40px;
+}
+
 .button {
     font-family: 'OstrichSansBlack', sans-serif;
     color: #555;
