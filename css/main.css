@@ -142,6 +142,7 @@ ul {
 
 #main-footer {
     background-color: #95CEC7;
+    min-width: 1120px;
     text-align: center;
     color: white;
 }
