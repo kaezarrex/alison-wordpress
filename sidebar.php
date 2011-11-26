@@ -8,6 +8,7 @@
                         </ul>
                     </li>
                     <li><a href="http://www.etsy.com/shop/LoveCitron"><div class="nav-menu-item">Shop</div></a></li>
+                    <li><a href="http://eepurl.com/gMRw9"><div class="nav-menu-item">Newsletter</div></a></li>
                 </ul>
                 <div id="social">
                     <a href="http://www.alisoncitron.com/blog/?feed=rss2" id="rss"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/rss.png" width="34px" height="34px"></a>

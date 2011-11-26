@@ -18,7 +18,7 @@
                 <li>love.citron&#123;at&#125;gmail&#123;dot&#125;com</li>
                 <li><a href="http://www.alisoncitron.com">www.alisoncitron.com</a></li>
                 <li><a href="http://lovecitron.etsy.com">lovecitron.etsy.com</a></li>
-                <li><a href="https://spreadsheets.google.com/viewform?formkey=dFZHeFNaX1cwdlRRVDNYY0NpYWx5UkE6MQ">sign up for my mailing list</a></li>
+                <li><a href="http://eepurl.com/gMRw9">sign up for my mailing list</a></li>
             </ul>
         </section>
         <section>
