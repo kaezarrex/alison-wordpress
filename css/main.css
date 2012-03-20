@@ -25,6 +25,8 @@
 
 body {
     font-family: 'Gentium Basic', serif;
+    color: #555;
+    margin: 0px;
 }
 
 header {
@@ -50,10 +52,11 @@ footer {
 
 h1 {
     font-family: 'OstrichSansBlack', sans-serif;
-    font-size: 64px;
+    font-size: 52px;
     font-weight: normal;
     text-transform: uppercase;
-    margin-top: 8px;
+    color: #555;
+    margin-top: 0px;
     margin-bottom: 20px;
     margin-left: 50px;
 }
@@ -86,7 +89,8 @@ ul {
 }
 
 #top-header {
-    margin-left: 270px;
+    width: 646px;
+    margin: auto;
 }
 
 #content {
@@ -96,8 +100,8 @@ ul {
 }
 
 #posts {
-    margin-left: 350px;
     width: 740px;
+    margin: auto;
 }
 
 #posts article {
@@ -121,12 +125,134 @@ ul {
 
 #posts p {
     margin-bottom: 30px;
-    font-size: 18px;
+    font-size: 17px;
     color: #555555;
 }
 
+#posts p a ,
+#login a {
+    color: #95CEC7;
+    text-decoration: underline;
+}
+
+#posts article img {
+    display: block;
+    margin: auto;
+}
+
 #main-footer {
+    background-color: #95CEC7;
+    min-width: 1120px;
     text-align: center;
+    color: white;
+}
+
+#main-footer section {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    font-family: 'OstrichSansBlack', sans-serif;
+    font-size: 24px;
+    margin: 20px;
+}
+
+#main-footer a {
+    color: white;
+}
+
+#main-footer h1 {
+    font-size: 56px;
+    color: #8C9096;
+    margin: 0 0 5px 0;
+}
+
+#main-footer li {
+    padding: 2px;
+}
+
+#main-footer h1.yellow {
+    color: #FAFF69;
+}
+
+#main-footer form {
+    text-align: right;
+}
+
+#main-footer input {
+    display: block;
+}
+
+#main-footer input.text {
+    font-family: 'Gentium Basic', serif;
+    font-size: 14px;
+    border: none;
+    width: 133px;
+    height: 20px;
+    padding-left: 2px;
+}
+
+#main-footer input.button {
+    font-family: 'OstrichSansBlack', sans-serif;
+    font-size: 24px;
+    margin: 5px 0 0 110px;
+    padding: 0px;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+#contact {
+    font-family: 'Gentium Basic', serif;
+    font-size: 14px;
+}
+
+#comments {
+    width: 700px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+}
+
+textarea,
+input.text {
+    border: 1px solid #95CEC7;
+    font-family: 'Gentium Basic', serif;
+    font-size: 18px;
+    padding: 5px 5px 0 5px;
+    color: #555;
+}
+
+#comments textarea {
+    padding: 20px;
+    width: 600px;
+}
+
+#comments h2 {
+    font-family: 'OstrichSansBlack', sans-serif;
+    color: #555;
+    font-size: 26px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#social {
+    margin-left: 40px;
+}
+
+.button {
+    font-family: 'OstrichSansBlack', sans-serif;
+    color: #555;
+    border: none;
+    background: none;
+    font-size: 26px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 0px;
+}
+
+.nav-menu {
+    width: 280px;
 }
 
 .nav-menu li {
@@ -175,7 +301,7 @@ ul {
 
 .date {
     font-family: 'OstrichSansBlack', sans-serif;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: normal;
     line-height: 48px;
 }
@@ -208,4 +334,104 @@ ul {
     border: 1px solid #AAA;
     padding: 5px;
     background-color: white;
+}
+
+.comment p {
+    margin-left: 94px;
+}
+
+.comment-author {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.comment-author img {
+    float: left;
+    margin: 0 30px 15px 0;
+}
+
+.comment-meta {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #95CEC7;
+    width: 300px;
+    margin-left: 94px;
+}
+
+.comment-meta a {
+    font-size: 16px;
+    font-style: italic;
+    color: #999;
+}
+
+#main-nav-above,
+#main-nav-below {
+    padding: 10px 10px 0 10px;
+}
+
+#main-nav-above a,
+#main-nav-below a {
+    color: #555;
+    margin: 4px;
+    font-size: 28px;
+}
+
+#main-nav-above .nav-previous:before,
+#main-nav-below .nav-previous:before,
+#main-nav-above .nav-previous:after,
+#main-nav-below .nav-previous:after {
+    content: url(../images/black-arrow-left.png);
+    margin: 5px;
+}
+
+#main-nav-above .nav-next:before,
+#main-nav-below .nav-next:before,
+#main-nav-above .nav-next:after,
+#main-nav-below .nav-next:after {
+    content: url(../images/black-arrow-right.png);
+    margin: 5px;
+}
+
+#nav-above,
+#nav-below {
+    padding: 10px 10px 0 10px;
+}
+
+#nav-above a,
+#nav-below a {
+    color: #95CEC7;
+    margin: 4px;
+    font-size: 18px;
+}
+
+#nav-above .nav-previous:before,
+#nav-below .nav-previous:before {
+    content: url(../images/green-arrow-left.png);
+    margin: 5px;
+}
+
+#nav-above .nav-next:after,
+#nav-below .nav-next:after {
+    content: url(../images/green-arrow-right.png);
+    margin: 5px;
+}
+
+.navigation {
+    background-color: white;
+    width: 740px;
+    margin: auto;
+
+}
+
+.navigation a {
+    font-family: 'OstrichSansBlack', sans-serif;
+    text-transform: uppercase;
+}
+
+.nav-next,
+.nav-previous {
+    display: inline-block;
+}
+
+.nav-next {
+    float: right;
 }
