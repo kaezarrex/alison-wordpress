@@ -20,6 +20,6 @@
     <body>
         <header id="top-header">
             <a href="<?php bloginfo('home') ?>/" title="<?php echo wp_specialchars( get_bloginfo('name'), 1 ) ?>" rel="home">
-                <img width="646px" height="456px" alt="Alison Citron" src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png">
+                <img width="564px" height="93px" alt="Alison Citron" src="<?php bloginfo('stylesheet_directory'); ?>/images/header.png">
             </a>
         </header>

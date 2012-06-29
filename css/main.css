@@ -23,7 +23,52 @@
 
 }
 
+@font-face {
+    font-family: 'QuicksandBold';
+    src: url('fonts/quicksand/Quicksand_Bold-webfont.eot');
+    src: url('fonts/quicksand/Quicksand_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/quicksand/Quicksand_Bold-webfont.woff') format('woff'),
+         url('fonts/quicksand/Quicksand_Bold-webfont.ttf') format('truetype'),
+         url('fonts/quicksand/Quicksand_Bold-webfont.svg#QuicksandBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'QuicksandBook';
+    src: url('fonts/quicksand/Quicksand_Book-webfont.eot');
+    src: url('fonts/quicksand/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/quicksand/Quicksand_Book-webfont.woff') format('woff'),
+         url('fonts/quicksand/Quicksand_Book-webfont.ttf') format('truetype'),
+         url('fonts/quicksand/Quicksand_Book-webfont.svg#QuicksandBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'QuicksandLight';
+    src: url('fonts/quicksand/Quicksand_Light-webfont.eot');
+    src: url('fonts/quicksand/Quicksand_Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/quicksand/Quicksand_Light-webfont.woff') format('woff'),
+         url('fonts/quicksand/Quicksand_Light-webfont.ttf') format('truetype'),
+         url('fonts/quicksand/Quicksand_Light-webfont.svg#QuicksandLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'QuicksandLightOblique';
+    src: url('fonts/quicksand/Quicksand_Light_Oblique-webfont.eot');
+    src: url('fonts/quicksand/Quicksand_Light_Oblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/quicksand/Quicksand_Light_Oblique-webfont.woff') format('woff'),
+         url('fonts/quicksand/Quicksand_Light_Oblique-webfont.ttf') format('truetype'),
+         url('fonts/quicksand/Quicksand_Light_Oblique-webfont.svg#QuicksandLightOblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
+    background: white url(../images/arches.png) repeat top left;
     font-family: 'Gentium Basic', serif;
     color: #555;
     margin: 0px;
@@ -51,35 +96,39 @@ footer {
 }
 
 h1 {
-    font-family: 'OstrichSansBlack', sans-serif;
-    font-size: 52px;
+    font-family: 'QuicksandBook', sans-serif;
+    font-size: 36px;
     font-weight: normal;
     text-transform: uppercase;
-    color: #555;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    margin-left: 50px;
+    margin: 2px 0;
 }
 
-h2 , h2 a {
-    color: #95CEC7;
-    font-size: 20px;
-    font-weight: bold;
+h1 a {
+    font-family: 'QuicksandBook', sans-serif;
+    font-size: 36px;
+    font-weight: normal;
     text-transform: uppercase;
-    margin: 5px 0px 5px 0px;
+    color: #555555;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'QuicksandBook', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 2px 0;
 }
 
 h3 {
-    color: #555555;
-    font-size: 14px;
+    font-size: 12px;
     font-style: italic;
     font-weight: normal;
-    margin: 2px 0px 2px 0px;
+    margin: 2px 0;
 }
 
 a {
     text-decoration: none;
-    color: #555555;
+    color: #F26B5D;
 }
 
 ul {
@@ -89,49 +138,68 @@ ul {
 }
 
 #top-header {
-    width: 646px;
-    margin: auto;
+    width: 564px;
+    margin: 40px auto 0;
 }
 
-#content {
-    padding-top: 30px;
+#content { padding-top: 30px;
     padding-bottom: 60px;
     background-image: url(../images/background.png);
 }
 
 #posts {
-    width: 740px;
+    padding: 0 80px;
+    width: 700px;
     margin: auto;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 20px 0px #888; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    box-shadow: 0px 0px 20px 0px #888; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
 }
 
 #posts article {
-    background-color: white;
-    padding: 20px;
+    padding: 50px 0;
 }
 
-#posts article section {
-    margin-left: 120px;
+#posts article>header {
+    text-align: center;
+    margin-bottom: -25px;
+}
+
+#posts article>section {
+    border-left: 1px solid #F26B5D;
+    border-right: 1px solid #F26B5D;
+    padding: 0 50px 35px;
 }
 
 #posts footer {
-    margin-left: 120px;
+    height: 30px;
+    padding: 0 50px;
+    border-left: 1px solid #F26B5D;
+    border-right: 1px solid #F26B5D;
 }
 
 #posts footer section {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0px 20px 0px 20px;
+}
+
+#posts .post-comments {
+    float: left;
+}
+
+#posts .post-categories,
+#posts .post-author {
+    margin-left: 40px;
+    float: right;
 }
 
 #posts p {
-    margin-bottom: 30px;
-    font-size: 17px;
+    margin: 25px 0 0;
+    font-size: 15px;
+    line-height: 22px;
     color: #555555;
 }
 
 #posts p a ,
 #login a {
-    color: #95CEC7;
     text-decoration: underline;
 }
 
@@ -300,14 +368,19 @@ input.text {
 }
 
 .date {
-    font-family: 'OstrichSansBlack', sans-serif;
-    font-size: 30px;
-    font-weight: normal;
-    line-height: 48px;
+    letter-spacing: 2px;
+    line-height: 50px;
+    vertical-align: top;
 }
 
-.date .month {
-    color: #999999;
+.date:before {
+    content: url(../images/date-arrow-left.png);
+    margin-right: 10px;
+}
+
+.date:after {
+    content: url(../images/date-arrow-right.png);
+    margin-left: 10px;
 }
 
 .badge {
