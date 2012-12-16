@@ -10,8 +10,9 @@
         <link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __( '%s latest comments', 'sandbox' ), wp_specialchars( get_bloginfo('name'), 1 ) ) ?>" />
         <link rel="pingback" href="<?php bloginfo('pingback_url') ?>" />
 
-        <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis+Light' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Gentium+Basic' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="//use.typekit.net/miw4xkh.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_directory'); ?>/css/font-awesome.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('stylesheet_directory'); ?>/css/main.css" />
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
         <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/main.js"></script>
@@ -20,6 +21,6 @@
     <body>
         <header id="top-header">
             <a href="<?php bloginfo('home') ?>/" title="<?php echo wp_specialchars( get_bloginfo('name'), 1 ) ?>" rel="home">
-                <img width="646px" height="456px" alt="Alison Citron" src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png">
+                <img width="382px" height="114px" alt="Alison Citron" src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png">
             </a>
         </header>

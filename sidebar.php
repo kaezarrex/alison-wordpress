@@ -1,6 +1,6 @@
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="http://alisoncitron.com/index.html"><div class="nav-menu-item">About</div></a></li>
+                    <li><a href="http://alisoncitron.com/"><div class="nav-menu-item">About</div></a></li>
                     <li>
                         <a href="#"><div class="nav-menu-item"><?php _e( 'Categories', 'sandbox' ) ?></div></a>
                         <ul class="nav-sub-menu">
@@ -11,8 +11,8 @@
                     <li><a href="http://eepurl.com/gMRw9"><div class="nav-menu-item">Newsletter</div></a></li>
                 </ul>
                 <div id="social">
-                    <a href="http://www.alisoncitron.com/blog/?feed=rss2" id="rss"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/rss.png" width="34px" height="34px"></a>
-                    <a href="http://twitter.com/#!/thealisoncitron" id="twitter"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/twitter.png" width="34px" height="34px"></a>
-                    <a href="http://www.facebook.com/pages/Love-Citron/308198629206234" id="facebook"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/facebook.png" width="34px" height="34px"></a>
+                    <a href="http://www.alisoncitron.com/blog/?feed=rss2" id="rss"><i class="icon-rss"></i></a>
+                    <a href="http://twitter.com/#!/thealisoncitron" id="twitter"><i class="icon-twitter"></i></a>
+                    <a href="http://www.facebook.com/pages/Love-Citron/308198629206234" id="facebook"><i class="icon-facebook"></i></a>
                 </div>
             </nav>

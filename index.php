@@ -16,8 +16,7 @@
                 <article id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
                     <header>
                         <div class="date">
-                            <span class="badge"><?php the_time('j') ?></span>
-                            <span class="month"><?php the_time('M') ?> &#8211; <?php the_time() ?></span>
+                            <?php the_time('j') ?> <?php the_time('M') ?> &#8211; <?php the_time() ?>
                         </div>
                         <h1>
                             <a href="<?php the_permalink() ?>" title="<?php printf( __('Permalink to %s', 'sandbox'), the_title_attribute('echo=0') ) ?>" rel="bookmark">

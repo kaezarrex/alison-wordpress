@@ -1,32 +1,8 @@
-
-@font-face {
-    font-family: 'OstrichSansBlack';
-    src: url('fonts/ostrich/ostrich-black-webfont.eot');
-    src: url('fonts/ostrich/ostrich-black-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/ostrich/ostrich-black-webfont.woff') format('woff'),
-         url('fonts/ostrich/ostrich-black-webfont.ttf') format('truetype'),
-         url('fonts/ostrich/ostrich-black-webfont.svg#OstrichSansBlack') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'OstrichSansRoundedMedium';
-    src: url('fonts/ostrich/ostrich-rounded-webfont.eot');
-    src: url('fonts/ostrich/ostrich-rounded-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/ostrich/ostrich-rounded-webfont.woff') format('woff'),
-         url('fonts/ostrich/ostrich-rounded-webfont.ttf') format('truetype'),
-         url('fonts/ostrich/ostrich-rounded-webfont.svg#OstrichSansRoundedMedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 body {
-    font-family: 'Gentium Basic', serif;
+    font-family: "chaparral-pro", serif;
     color: #555;
     margin: 0px;
+    background-image: url(../images/background.png);
 }
 
 header {
@@ -51,8 +27,8 @@ footer {
 }
 
 h1 {
-    font-family: 'OstrichSansBlack', sans-serif;
-    font-size: 52px;
+    font-family: "futura-pt", sans-serif;
+    font-size: 40px;
     font-weight: normal;
     text-transform: uppercase;
     color: #555;
@@ -62,8 +38,8 @@ h1 {
 }
 
 h2 , h2 a {
-    color: #95CEC7;
-    font-size: 20px;
+    color: #D99172;
+    font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
     margin: 5px 0px 5px 0px;
@@ -79,7 +55,7 @@ h3 {
 
 a {
     text-decoration: none;
-    color: #555555;
+    color: #D99172;
 }
 
 ul {
@@ -89,14 +65,13 @@ ul {
 }
 
 #top-header {
-    width: 646px;
+    width: 382px;
     margin: auto;
 }
 
 #content {
     padding-top: 30px;
     padding-bottom: 60px;
-    background-image: url(../images/background.png);
 }
 
 #posts {
@@ -131,7 +106,7 @@ ul {
 
 #posts p a ,
 #login a {
-    color: #95CEC7;
+    color: #D99172;
     text-decoration: underline;
 }
 
@@ -141,27 +116,26 @@ ul {
 }
 
 #main-footer {
-    background-color: #95CEC7;
+    background-color: #F0EFF1;
     min-width: 1120px;
     text-align: center;
-    color: white;
+    color: #928F80;
 }
 
 #main-footer section {
     display: inline-block;
     text-align: left;
     vertical-align: top;
-    font-family: 'OstrichSansBlack', sans-serif;
+    font-family: "futura-pt", sans-serif;
     font-size: 24px;
     margin: 20px;
 }
 
 #main-footer a {
-    color: white;
+    color: #928F80;
 }
 
 #main-footer h1 {
-    font-size: 56px;
     color: #8C9096;
     margin: 0 0 5px 0;
 }
@@ -171,7 +145,7 @@ ul {
 }
 
 #main-footer h1.yellow {
-    color: #FAFF69;
+    color: #D99172;
 }
 
 #main-footer form {
@@ -183,7 +157,7 @@ ul {
 }
 
 #main-footer input.text {
-    font-family: 'Gentium Basic', serif;
+    font-family: "chaparral-pro", serif;
     font-size: 14px;
     border: none;
     width: 133px;
@@ -192,18 +166,18 @@ ul {
 }
 
 #main-footer input.button {
-    font-family: 'OstrichSansBlack', sans-serif;
+    font-family: "futura-pt", sans-serif;
     font-size: 24px;
     margin: 5px 0 0 110px;
     padding: 0px;
     border: none;
     background: none;
-    color: white;
+    color: #928F80;
     cursor: pointer;
 }
 
 #contact {
-    font-family: 'Gentium Basic', serif;
+    font-family: "chaparral-pro", serif;
     font-size: 14px;
 }
 
@@ -216,8 +190,9 @@ ul {
 
 textarea,
 input.text {
-    border: 1px solid #95CEC7;
-    font-family: 'Gentium Basic', serif;
+    border: 1px solid #928F80;
+    border-radius: 4px;
+    font-family: "chaparral-pro", serif;
     font-size: 18px;
     padding: 5px 5px 0 5px;
     color: #555;
@@ -229,7 +204,7 @@ input.text {
 }
 
 #comments h2 {
-    font-family: 'OstrichSansBlack', sans-serif;
+    font-family: "futura-pt", sans-serif;
     color: #555;
     font-size: 26px;
     font-weight: normal;
@@ -240,8 +215,22 @@ input.text {
     margin-left: 40px;
 }
 
+#social a {
+    background-color: #D99172;
+    color: #ffffff;
+    display: inline-block;
+    text-align: center;
+    font-size: 30px;
+    line-height: 34px;
+    padding: 4px;
+    margin: 0px;
+    height: 26px;
+    width: 26px;
+    border-radius: 5px;
+}
+
 .button {
-    font-family: 'OstrichSansBlack', sans-serif;
+    font-family: "futura-pt", sans-serif;
     color: #555;
     border: none;
     background: none;
@@ -264,9 +253,10 @@ input.text {
     left: 100px;
     top: 9px;
     margin-left: 10px;
-    font-family: 'OstrichSansRoundedMedium', sans-serif;
+    font-family: "futura-pt", sans-serif;
     color: white;
-    font-size: 32px;
+    font-size: 22px;
+    line-height: 30px;
     width: 0px;
     -webkit-transform: skewX(5deg) skewY(2deg);
     -moz-transform: skewX(5deg) skewY(2deg);
@@ -277,7 +267,7 @@ input.text {
     display: block;
     position: relative;
     left: -100px;
-    background-color: #95CEC7;
+    background-color: #D99172;
     width: 300px;
     height: 50px;
     margin: 10px;
@@ -300,31 +290,21 @@ input.text {
 }
 
 .date {
-    font-family: 'OstrichSansBlack', sans-serif;
-    font-size: 30px;
+    font-family: "futura-pt", sans-serif;
+    font-size: 26px;
     font-weight: normal;
     line-height: 48px;
-}
-
-.date .month {
     color: #999999;
-}
-
-.badge {
-    display: inline-block;
-    background-image: url(../images/badge.png);
-    color: white;
-    width: 47px;
-    height: 43px;
-    padding-top: 4px;
-    text-align: center;
 }
 
 .slash {
     display: inline-block;
-    width: 24px;
+    width: 0px;
     height: 59px;
-    background-image: url(../images/slash.png);
+    border-left: 1px solid #D0B88E;
+    -webkit-transform: skewX(-20deg) skewY(0deg);
+    -moz-transform: skewX(-20deg) skewY(0deg);
+    -o-transform: skewX(-20deg) skewY(0deg);
 }
 
 .sidebar {
@@ -398,20 +378,20 @@ input.text {
 
 #nav-above a,
 #nav-below a {
-    color: #95CEC7;
+    color: #555;
     margin: 4px;
     font-size: 18px;
 }
 
 #nav-above .nav-previous:before,
 #nav-below .nav-previous:before {
-    content: url(../images/green-arrow-left.png);
+    content: url(../images/black-arrow-left.png);
     margin: 5px;
 }
 
 #nav-above .nav-next:after,
 #nav-below .nav-next:after {
-    content: url(../images/green-arrow-right.png);
+    content: url(../images/black-arrow-right.png);
     margin: 5px;
 }
 
@@ -423,7 +403,7 @@ input.text {
 }
 
 .navigation a {
-    font-family: 'OstrichSansBlack', sans-serif;
+    font-family: "futura-pt", sans-serif;
     text-transform: uppercase;
 }
 
