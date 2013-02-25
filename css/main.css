@@ -415,3 +415,16 @@ input.text {
 .nav-next {
     float: right;
 }
+
+#posts a.pinit {
+    background-image: url(../images/pinit.png);
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    margin: -50px;
+    position: relative;
+    bottom: 60px;
+    right: 40px;
+    float: right;
+    display: none;
+}
