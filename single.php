@@ -18,7 +18,11 @@
                         <div class="date">
                             <?php the_time('j') ?> <?php the_time('M') ?> &#8211; <?php the_time() ?>
                         </div>
-                        <h1 class="entry-title"><?php the_title() ?></h1>
+                        <h1 class="entry-title">
+                            <a href="<?php the_permalink() ?>" title="<?php printf( __('Permalink to %s', 'sandbox'), the_title_attribute('echo=0') ) ?>" rel="bookmark">
+                                <?php the_title() ?>
+                            </a>
+                        </h1>
                     </header>
                     <section>
                         <?php the_content() ?>
