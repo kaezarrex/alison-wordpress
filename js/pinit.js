@@ -1,12 +1,31 @@
 $(function(){
 
-    console.log('loading pinit');
-
     var urlEncode = function(map) {
         return _.reduce(map, function(memo, value, key) {
             if (memo !== '?') memo += '&';
             return memo += key + '=' + encodeURIComponent(value);
         }, '?'); 
+    };
+
+    var openPopup = function(name, url, width, height){
+
+        var properties = [
+                'width='+width,
+                'height='+height,
+                'location=false',
+                'menubar=false',
+                'resizable=false',
+                'status=true',
+                'toolbar=false',
+                'scrollbars=yes'
+            ],
+            popup = window.open(url, name, properties.join(','));
+
+        if(window.focus) {
+            popup.focus();
+        }
+
+        return popup;
     };
 
     var pinterestUrl = function(url, media, description) {
@@ -28,12 +47,15 @@ $(function(){
             url = $header.attr('href'),
             media = $(this).attr('src'),
             description = $header.text().trim(),
-            $link = $(this).parent();
+            $link = $(this).parent(),
             pinUrl = pinterestUrl(url, media, description);
 
-        $link.attr('href', pinUrl);
+        $link.click(function() {
+            event.preventDefault();
+            openPopup('Pin This!', pinUrl, 620, 280);
+        });
 
-        return '<a class="pinit" href="' + pinUrl + '"></a>';
+        return '<a class="pinit" href="#"></a>';
 
     });
 
