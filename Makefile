@@ -1,2 +1,5 @@
-bundle:
-	zip -r alison.zip * -x Makefile
+alicitron.zip:
+	zip -r alicitron.zip * -x Makefile
+
+clean:
+	rm -f alicitron.zip
