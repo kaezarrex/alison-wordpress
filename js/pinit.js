@@ -50,7 +50,7 @@ $(function(){
             $link = $(this).parent(),
             pinUrl = pinterestUrl(url, media, description);
 
-        $link.click(function() {
+        $link.click(function(event) {
             event.preventDefault();
             openPopup('Pin This!', pinUrl, 680, 280);
         });
