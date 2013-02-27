@@ -343,9 +343,16 @@ input.text {
     color: #999;
 }
 
+#disqus_thread {
+    background-color: white;
+    width: 700px;
+    margin: auto;
+    padding: 20px;
+}
+
 #main-nav-above,
 #main-nav-below {
-    padding: 10px 10px 0 10px;
+    padding: 20px;
 }
 
 #main-nav-above a,
@@ -397,7 +404,7 @@ input.text {
 
 .navigation {
     background-color: white;
-    width: 740px;
+    width: 700px;
     margin: auto;
 
 }
