@@ -1,0 +1,22 @@
+/*
+ * Theme Name: Simple
+ * Author: David Hazinski
+ * Version: 0.0
+ * */
+
+body {
+    background-color: #eee;
+}
+
+.post, #sidebar, #nav-above, #nav-below {
+    background-color: #fff;
+}
+
+.post, #nav-above, #nav-below {
+    padding: 30px;
+    margin: 0 0 20px 0;
+}
+
+#sidebar-content {
+    margin: 30px;
+}
