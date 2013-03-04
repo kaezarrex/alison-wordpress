@@ -163,6 +163,10 @@ a:hover {
     color: #333;
 }
 
+.sidebar-section {
+    margin: 20px 0;
+}
+
 .social-newsletter,
 .social-newsletter:hover {
     color: #AF6D55;
