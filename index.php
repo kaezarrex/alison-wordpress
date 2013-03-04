@@ -5,20 +5,21 @@
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
                     <div class="post">
-                        <h1>
+                        <h1 class="post-title">
                             <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                         </h1>
-                        <small><?php the_time('n.j.y') ?></small>
+                        <div class="post-date">
+                            <small><?php the_time('n.j.y') ?></small>
+                        </div>
                         <div class="entry">
                             <?php the_content(); ?>
                         </div>
-                        <?php echo $post->comment_count?>
-                        <?php echo ($post->comment_count==1?' comment':' comments');?>
-                        <p class="postmetadata">Posted in <?php the_category(', '); ?></p>
-                        <a href="<?php the_permalink(); ?>#disqus_thread">
-                            <?php echo $post->comment_count?>
-                            <?php echo ($post->comment_count==1?' comment':' comments');?>
-                        </a>
+                        <div class="post-meta">
+                            <a href="<?php the_permalink(); ?>#disqus_thread" class="comment-count">
+                                <?php echo $post->comment_count?>
+                                <?php echo ($post->comment_count==1?' comment':' comments');?>
+                            </a>
+                        </div>
                     </div>
 
                     <?php endwhile; else: ?>

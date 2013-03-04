@@ -6,15 +6,16 @@
                     <?php the_post() ?>
 
                     <div class="post">
-                        <h1>
+                        <h1 class="post-title">
                             <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                         </h1>
-                        <small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
+                        <div class="post-date">
+                            <small><?php the_time('n.j.y') ?></small>
+                        </div>
                         <div class="entry">
                             <?php the_content(); ?>
                         </div>
-                        <p class="postmetadata">Posted in <?php the_category(', '); ?></p>
-<?php comments_template() ?>
+                        <?php comments_template() ?>
                     </div>
 
                 </div>
