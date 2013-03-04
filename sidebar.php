@@ -1,16 +1,16 @@
 
             <div id="sidebar-content">
                 <div id="bio">
-                    <img src="http://placekitten.com/160/120">
+                    <!--<img src="http://placekitten.com/160/120">-->
                     <div id="bio-headline">I'm Alison Citron.</div>
                     <div id="bio-body">This is where I talk about my design life adventures.</div>
                 </div>
                 <ul class="unstyled">
-                    <li><h2><a href="#" class="social-newsletter">Newsletter</a></h2></li>
-                    <li><h2><a href="#" class="social-pinterest">Pinterest</a></h2></li>
-                    <li><h2><a href="#" class="social-instagram">Instagram</a></h2></li>
-                    <li><h2><a href="#" class="social-facebook">Facebook</a></h2></li>
-                    <li><h2><a href="#" class="social-twitter">Twitter</a></h2></li>
+                    <!--<li><h2><a href="#" class="social-newsletter">Newsletter</a></h2></li>-->
+                    <li><h2><a href="http://pinterest.com/thealisoncitron/" class="social-pinterest">Pinterest</a></h2></li>
+                    <li><h2><a href="http://instagram.com/thealisoncitron" class="social-instagram">Instagram</a></h2></li>
+                    <li><h2><a href="http://www.facebook.com/pages/Love-Citron/308198629206234" class="social-facebook">Facebook</a></h2></li>
+                    <li><h2><a href="https://twitter.com/thealisoncitron" class="social-twitter">Twitter</a></h2></li>
                 </ul>
                 <h3 id="search">Search</h3>
                 <?php get_search_form(); ?>
