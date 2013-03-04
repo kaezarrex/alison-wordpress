@@ -1,7 +1,7 @@
 
             <div id="sidebar-content">
                 <div id="bio" class="sidebar-section">
-                    <!--<img src="http://placekitten.com/160/120">-->
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/images/profile_pic.png">
                     <div id="bio-headline">I'm Alison Citron.</div>
                     <div id="bio-body">This is where I talk about my design life adventures.</div>
                 </div>
