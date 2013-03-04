@@ -195,3 +195,15 @@ a:hover {
 .comment-count {
     color: #918E7F;
 }
+
+a.pinit {
+    background-image: url(images/pinit.png);
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    margin: -50px;
+    position: relative;
+    bottom: 60px;
+    left: 535px;
+    display: none;
+}
