@@ -19,7 +19,7 @@
                 <div class="row">
                     <div class="span2 menu-item"><a href="//oneandonly.im/pricing">Pricing</a></div>
                     <div class="span2 menu-item"><a href="//oneandonly.im/gettingmarried">Weddings</a></div>
-                    <div class="span4"><a href="/"><img src="//oneandonly.im/media/img/oneandonlylogo.png"></a></div>
+                    <div class="span4"><a href="//oneandonly.im"><img src="//oneandonly.im/media/img/oneandonlylogo.png"></a></div>
                     <div class="span2 menu-item"><a href="//alisoncitron.com/blog">Blog</a></div>
                     <div class="span2 menu-item"><a href="//oneandonly.im/work">Work</a></div>
                 </div>
