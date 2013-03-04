@@ -1,15 +1,214 @@
 /*
  * Theme Name: AliCitron
- * Theme URI: http://alisoncitron.com/
+ * Theme URI: http://oneandonly.im/
  * Description: Alison Citron's blog theme.
  * Author: Alison Citron
- * Author URI: http://alisoncitron.com/
- * Template: sandbox
- * Version: 2.1.0
+ * Author URI: http://oneandonly.im/
+ * Version: 3.0.0
  * Tags: design
  *
- * License:
- * License URI:
- *
- * General comments (optional).
  * */
+
+body {
+    font-family: "futura-pt",sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #333;
+    padding-top: 104px;
+    background: white url(http://oneandonly.im/media/img/star-tile.png) repeat;
+}
+
+body, #top-menu {
+    background: white url(http://oneandonly.im/media/img/star-tile.png) repeat;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "futura-pt",sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+h1, h1 a, h1 a:hover {
+    color: #918E7F;
+}
+
+h2, h3, h2 a, h3 a, h2 a:hover, h3 a:hover {
+    color: #AF6D55;
+}
+
+h1 { font-size: 2em; }
+
+h2 { font-size: 1.6em; }
+
+h3 { font-size: 1.2em; }
+
+p {
+    font-family: "chaparral-pro", serif;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0 0 20px;
+}
+
+a {
+    color: #AF6D55;
+}
+
+a:hover {
+    color: #B8A270;
+    text-decoration: none;
+}
+
+.post, #sidebar, #nav-above, #nav-below {
+    background-color: #fff;
+}
+
+.post, #nav-above, #nav-below {
+    padding: 30px 50px;
+    margin: 0 0 20px 0;
+}
+
+.post-title {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.post-date {
+    color: #B8A270;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    min-height: 20px;
+}
+
+.comment-count {
+    float:right;
+}
+
+#sidebar-content {
+    margin: 30px;
+}
+
+#top-menu {
+    text-align: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+#top-menu {
+    margin-bottom: 40px;
+    padding: 20px 0 10px;
+}
+
+#top-menu .menu-item {
+    padding-top: 10px;
+}
+
+#top-menu .menu-item a {
+    color: #D99172;
+    padding: 10px;
+    display: inline-block;
+}
+
+#top-menu .menu-item a:hover {
+    text-decoration: underline;
+}
+
+#nav-above-links, #nav-below {
+    min-height: 20px;
+}
+
+.nav-previous, .nav-next {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #918E7F;
+}
+
+.nav-previous {
+    float: left;
+}
+
+.nav-next {
+    float: right;
+}
+
+#bio {
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+#bio-headline {
+    font-weight: 500;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+#bio-body {
+    font-family: "chaparral-pro", serif;
+    font-weight: 400;
+    font-size: 0.7em;
+    line-height: 1.3;
+}
+
+.sidebar-list a {
+    font-family: "chaparral-pro", serif;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: lowercase;
+    color: #333;
+}
+
+.sidebar-section {
+    margin: 20px 0;
+}
+
+.social-newsletter,
+.social-newsletter:hover {
+    color: #AF6D55;
+}
+
+.social-pinterest,
+.social-pinterest:hover {
+    color: #DA9171;
+}
+
+.social-instagram,
+.social-instagram:hover {
+    color: #DC9F83;
+}
+
+.social-facebook,
+.social-facebook:hover {
+    color: #E3B09B;
+}
+
+.social-twitter,
+.social-twitter:hover {
+    color: #E8B9A7;
+}
+
+.comment-count {
+    color: #918E7F;
+}
+
+a.pinit {
+    background-image: url(images/pinit.png);
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    margin: -50px;
+    position: relative;
+    bottom: 60px;
+    left: 535px;
+    display: none;
+}

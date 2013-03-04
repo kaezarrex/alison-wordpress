@@ -41,9 +41,9 @@ $(function(){
         return result;
     };
 
-    $('article section img').after(function() {
+    $('.post img').after(function() {
 
-        var $header = $(this).parents('article').find('header a'),
+        var $header = $(this).parents('.post').find('.post-title a'),
             url = $header.attr('href'),
             media = $(this).attr('src'),
             description = $header.text().trim(),
@@ -52,7 +52,7 @@ $(function(){
 
         $link.click(function() {
             event.preventDefault();
-            openPopup('Pin This!', pinUrl, 620, 280);
+            openPopup('Pin This!', pinUrl, 680, 280);
         });
 
         return '<a class="pinit" href="#"></a>';

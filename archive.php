@@ -1,76 +1,64 @@
 <?php get_header() ?>
 
-    <div id="content">
+            <div class="row">
 
-<?php get_sidebar() ?>
+                <div id="posts" class="span9">
 
-<?php the_post() ?>
-
-<?php if ( is_day() ) : ?>
-        <h1 class="page-title"><?php printf( __( 'Daily Archives: <span>%s</span>', 'sandbox' ), get_the_time(get_option('date_format')) ) ?></h1>
-<?php elseif ( is_month() ) : ?>
-        <h1 class="page-title"><?php printf( __( 'Monthly Archives: <span>%s</span>', 'sandbox' ), get_the_time('F Y') ) ?></h1>
-<?php elseif ( is_year() ) : ?>
-        <h1 class="page-title"><?php printf( __( 'Yearly Archives: <span>%s</span>', 'sandbox' ), get_the_time('Y') ) ?></h1>
-<?php elseif ( isset($_GET['paged']) && !empty($_GET['paged']) ) : ?>
-        <h1 class="page-title"><?php _e( 'Blog Archives', 'sandbox' ) ?></h1>
-<?php endif; ?>
-
-<?php rewind_posts() ?>
-
-            <section id="nav-above" class="navigation">
-                <?php next_posts_link( '%link', '<div class="nav-previous">%title</div>' ) ?>
-                <?php previous_posts_link( '%link', '<div class="nav-next">%title</div>' ) ?>
-            </section>
-
-            <section id="posts">
-
-<?php while ( have_posts() ) : the_post(); ?>
-
-                <article id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
-                    <header>
-                        <div class="date">
-                            <span class="badge"><?php the_time('j') ?></span>
-                            <span class="month"><?php the_time('M') ?> &#8211; <?php the_time() ?></span>
-                        </div>
-                        <h1>
-                            <a href="<?php the_permalink() ?>" title="<?php printf( __('Permalink to %s', 'sandbox'), the_title_attribute('echo=0') ) ?>" rel="bookmark">
-                                <?php the_title() ?>
-                            </a>
+                    <div id="nav-above">
+                        <h1 class="page-title">
+                        <?php if ( is_day() ) : ?>
+                            <?php printf('Daily Archives: <span>%s</span>', get_the_time(get_option('date_format')) ) ?>
+                        <?php elseif ( is_month() ) : ?>
+                            <?php printf('Monthly Archives: <span>%s</span>', get_the_time('F Y') ) ?>
+                        <?php elseif ( is_year() ) : ?>
+                            <?php printf('Yearly Archives: <span>%s</span>', get_the_time('Y') ) ?>
+                        <?php elseif ( isset($_GET['paged']) && !empty($_GET['paged']) ) : ?>
+                            Blog Archives
+                        <?php endif; ?>
                         </h1>
-                    </header>
-                    <section>
-                        <?php the_excerpt(__( 'Read More <span class="meta-nav">&raquo;</span>', 'sandbox' )) ?>
-                    </section>
-                    <footer>
-                        <section>
-                            <h2>
-                                <?php comments_popup_link( __( 'Comments (0)', 'sandbox' ), __( 'Comments (1)', 'sandbox' ), __( 'Comments (%)', 'sandbox' ) ) ?>
-                            </h2>
-                        </section>
-                        <div class="slash"></div>
-                        <section>
-                            <h2>Categories</h2>
-                            <h3><?php echo(get_the_category_list(', ')) ?></h3>
-                        </section>
-                        <div class="slash"></div>
-                        <section>
-                            <h2>Author</h2>
-                            <h3><?php echo(get_the_author()) ?></h3>
-                        </section>
-                    </footer>
-                </article><!-- .post -->
+                        <div id="nav-above-links">
+                            <?php next_posts_link('<div class="nav-previous">Older</div>') ?>
+                            <?php previous_posts_link('<div class="nav-next">Newer</div>') ?>
+                        </div>
+                    </div>
 
-<?php endwhile; ?>
+                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-            </section>
+                    <div class="post">
+                        <h1 class="post-title">
+                            <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+                        </h1>
+                        <div class="post-date">
+                            <small><?php the_time('n.j.y') ?></small>
+                        </div>
+                        <div class="entry">
+                            <?php the_excerpt(); ?>
+                        </div>
+                        <div class="post-meta">
+                            <a href="<?php the_permalink(); ?>#disqus_thread" class="comment-count">
+                                <?php echo $post->comment_count?>
+                                <?php echo ($post->comment_count==1?' comment':' comments');?>
+                            </a>
+                        </div>
+                    </div>
 
-            <section id="nav-above" class="navigation">
-                <?php next_posts_link( '%link', '<div class="nav-previous">%title</div>' ) ?>
-                <?php previous_posts_link( '%link', '<div class="nav-next">%title</div>' ) ?>
-            </section>
+                    <?php endwhile; else: ?>
 
-    </div><!-- #content .hfeed -->
+                    <div class="post">
+                        <p>Sorry, no posts matched your criteria.</p>
+                    </div>
 
-<?php get_sidebar() ?>
+                    <?php endif; ?>
+
+                    <div id="nav-below">
+                        <?php next_posts_link('<div class="nav-previous">Older</div>') ?>
+                        <?php previous_posts_link('<div class="nav-next">Newer</div>') ?>
+                    </div>
+
+                </div>
+                <div id="sidebar" class="span3">
+                    <?php get_sidebar() ?>
+                </div>
+            </div>
+
 <?php get_footer() ?>

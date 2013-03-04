@@ -1,18 +1,33 @@
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="http://alisoncitron.com/"><div class="nav-menu-item">About</div></a></li>
-                    <li>
-                        <a href="#"><div class="nav-menu-item"><?php _e( 'Categories', 'sandbox' ) ?></div></a>
-                        <ul class="nav-sub-menu">
-                            <?php wp_list_categories('title_li=&show_count=0&hierarchical=1') ?> 
-                        </ul>
-                    </li>
-                    <li><a href="http://www.etsy.com/shop/LoveCitron"><div class="nav-menu-item">Shop</div></a></li>
-                    <li><a href="http://eepurl.com/gMRw9"><div class="nav-menu-item">Newsletter</div></a></li>
-                </ul>
-                <div id="social">
-                    <a href="http://www.alisoncitron.com/blog/?feed=rss2" id="rss"><i class="icon-rss"></i></a>
-                    <a href="http://twitter.com/#!/thealisoncitron" id="twitter"><i class="icon-twitter"></i></a>
-                    <a href="http://www.facebook.com/pages/Love-Citron/308198629206234" id="facebook"><i class="icon-facebook"></i></a>
+
+            <div id="sidebar-content">
+                <div id="bio" class="sidebar-section">
+                    <!--<img src="http://placekitten.com/160/120">-->
+                    <div id="bio-headline">I'm Alison Citron.</div>
+                    <div id="bio-body">This is where I talk about my design life adventures.</div>
                 </div>
-            </nav>
+                <div class="sidebar-section">
+                    <ul class="unstyled">
+                        <!--<li><h2><a href="#" class="social-newsletter">Newsletter</a></h2></li>-->
+                        <li><h2><a href="http://pinterest.com/thealisoncitron/" class="social-pinterest">Pinterest</a></h2></li>
+                        <li><h2><a href="http://instagram.com/thealisoncitron" class="social-instagram">Instagram</a></h2></li>
+                        <li><h2><a href="http://www.facebook.com/pages/Love-Citron/308198629206234" class="social-facebook">Facebook</a></h2></li>
+                        <li><h2><a href="https://twitter.com/thealisoncitron" class="social-twitter">Twitter</a></h2></li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3 id="search">Search</h3>
+                    <?php get_search_form(); ?>
+                </div>
+                <div class="sidebar-section">
+                    <h3 id="categories"><a href="#sidebar-category-list" data-toggle="collapse">Categories</a></h3>
+                    <ul id="sidebar-category-list" class="sidebar-list unstyled collapse">
+                        <?php wp_list_cats(); ?>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3 id="archives"><a href="#sidebar-archive-list" data-toggle="collapse">Archives</a></h3>
+                    <ul id="sidebar-archive-list" class="sidebar-list unstyled collapse">
+                        <?php wp_get_archives('type=monthly') ?>
+                    </ul>
+                </div>
+            </div>

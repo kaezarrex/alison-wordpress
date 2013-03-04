@@ -1,61 +1,42 @@
-    <?php get_header() ?>
+<?php get_header() ?>
 
-        <div id="content">
+            <div class="row">
+                <div id="posts" class="span9">
+                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-            <?php get_sidebar() ?>
-
-            <section id="main-nav-above" class="navigation">
-                <?php next_posts_link(__( '<div class="nav-previous">Older</div>', 'sandbox' )) ?>
-                <?php previous_posts_link(__( '<div class="nav-next">Newer</div>', 'sandbox' )) ?>
-            </section>
-
-            <section id="posts">
-
-            <?php while ( have_posts() ) : the_post() ?>
-
-                <article id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
-                    <header>
-                        <div class="date">
-                            <?php the_time('j') ?> <?php the_time('M') ?> &#8211; <?php the_time() ?>
-                        </div>
-                        <h1>
-                            <a href="<?php the_permalink() ?>" title="<?php printf( __('Permalink to %s', 'sandbox'), the_title_attribute('echo=0') ) ?>" rel="bookmark">
-                                <?php the_title() ?>
-                            </a>
+                    <div class="post">
+                        <h1 class="post-title">
+                            <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                         </h1>
-                    </header>
-                    <section>
-                        <?php the_content( __( 'Read More <span class="meta-nav">&raquo;</span>', 'sandbox' ) ) ?>
-                        <?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'sandbox' ) . '&after=</div>') ?>
-                    </section>
-                    <footer>
-                        <section>
-                            <h2>
-                                <?php comments_popup_link( __( 'Comments (0)', 'sandbox' ), __( 'Comments (1)', 'sandbox' ), __( 'Comments (%)', 'sandbox' ) ) ?>
-                            </h2>
-                        </section>
-                        <div class="slash"></div>
-                        <section>
-                            <h2>Categories</h2>
-                            <h3><?php echo(get_the_category_list(', ')) ?></h3>
-                        </section>
-                        <div class="slash"></div>
-                        <section>
-                            <h2>Author</h2>
-                            <h3><?php echo(get_the_author()) ?></h3>
-                        </section>
-                    </footer>
-                </article>
+                        <div class="post-date">
+                            <small><?php the_time('n.j.y') ?></small>
+                        </div>
+                        <div class="entry">
+                            <?php the_content(); ?>
+                        </div>
+                        <div class="post-meta">
+                            <a href="<?php the_permalink(); ?>#disqus_thread" class="comment-count">
+                                <?php echo $post->comment_count?>
+                                <?php echo ($post->comment_count==1?' comment':' comments');?>
+                            </a>
+                        </div>
+                    </div>
 
-            <?php endwhile; ?>
+                    <?php endwhile; else: ?>
 
-            </section>
+                    <p>Sorry, no posts matched your criteria.</p>
 
-            <section id="main-nav-below" class="navigation">
-                <?php next_posts_link(__( '<div class="nav-previous">Older</div>', 'sandbox' )) ?>
-                <?php previous_posts_link(__( '<div class="nav-next">Newer</div>', 'sandbox' )) ?>
-            </section>
+                    <?php endif; ?>
 
-    </div><!-- #content -->
+                    <div id="nav-below">
+                        <?php next_posts_link('<div class="nav-previous">Older</div>') ?>
+                        <?php previous_posts_link('<div class="nav-next">Newer</div>') ?>
+                    </div>
+
+                </div>
+                <div id="sidebar" class="span3">
+                    <?php get_sidebar() ?>
+                </div>
+            </div>
 
 <?php get_footer() ?>

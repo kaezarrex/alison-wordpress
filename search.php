@@ -1,85 +1,54 @@
 <?php get_header() ?>
 
-        <div id="content">
+            <div class="row">
 
-            <?php get_sidebar() ?>
+                <div id="posts" class="span9">
 
-<?php if ( have_posts() ) : ?>
-
-            <h1 class="page-title"><?php _e( 'Search Results for:', 'sandbox' ) ?> <span><?php the_search_query() ?></span></h1>
-            <?php $categorydesc = category_description(); if ( !empty($categorydesc) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $categorydesc . '</div>' ); ?>
-
-            <section id="nav-above" class="navigation">
-                <?php next_posts_link( '%link', '<div class="nav-previous">%title</div>' ) ?>
-                <?php previous_posts_link( '%link', '<div class="nav-next">%title</div>' ) ?>
-            </section>
-
-            <section id="posts">
-
-<?php while ( have_posts() ) : the_post() ?>
-
-                <article id="post-<?php the_ID() ?>" class="<?php sandbox_post_class() ?>">
-                    <header>
-                        <div class="date">
-                            <span class="badge"><?php the_time('j') ?></span>
-                            <span class="month"><?php the_time('M') ?> &#8211; <?php the_time() ?></span>
+                    <div id="nav-above">
+                        <h1 class="page-title">Search results for "<?php the_search_query() ?>"</h1>
+                        <div id="nav-above-links">
+                            <?php next_posts_link('<div class="nav-previous">Older</div>') ?>
+                            <?php previous_posts_link('<div class="nav-next">Newer</div>') ?>
                         </div>
-                        <h1>
-                            <a href="<?php the_permalink() ?>" title="<?php printf( __('Permalink to %s', 'sandbox'), the_title_attribute('echo=0') ) ?>" rel="bookmark">
-                                <?php the_title() ?>
-                            </a>
+                    </div>
+
+                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+                    <div class="post">
+                        <h1 class="post-title">
+                            <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
                         </h1>
-                    </header>
-                    <section>
-                        <?php the_excerpt(__( 'Read More <span class="meta-nav">&raquo;</span>', 'sandbox' )) ?>
-                    </section>
-                    <footer>
-                        <section>
-                            <h2>
-                                <?php comments_popup_link( __( 'Comments (0)', 'sandbox' ), __( 'Comments (1)', 'sandbox' ), __( 'Comments (%)', 'sandbox' ) ) ?>
-                            </h2>
-                        </section>
-                        <div class="slash"></div>
-                        <section>
-                            <h2>Categories</h2>
-                            <h3><?php echo(get_the_category_list(', ')) ?></h3>
-                        </section>
-                        <div class="slash"></div>
-                        <section>
-                            <h2>Author</h2>
-                            <h3><?php echo(get_the_author()) ?></h3>
-                        </section>
-                    </footer>
-                </article><!-- .post -->
-
-<?php endwhile; ?>
-
-            </section>
-
-            <section id="nav-above" class="navigation">
-                <?php next_posts_link( '%link', '<div class="nav-previous">%title</div>' ) ?>
-                <?php previous_posts_link( '%link', '<div class="nav-next">%title</div>' ) ?>
-            </section>
-
-<?php else : ?>
-
-            <section id="posts">
-                <article id="post-0" class="post no-results not-found">
-                    <h1><?php _e( 'Nothing Found', 'sandbox' ) ?></h1>
-                    <section>
-                        <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'sandbox' ) ?></p>
-                    </section>
-                    <form id="searchform-no-results" class="blog-search" method="get" action="<?php bloginfo('home') ?>">
-                        <div>
-                            <input id="s-no-results" name="s" class="text" type="text" value="<?php the_search_query() ?>" size="40" />
-                            <input class="button" type="submit" value="<?php _e( 'Find', 'sandbox' ) ?>" />
+                        <div class="post-date">
+                            <small><?php the_time('n.j.y') ?></small>
                         </div>
-                    </form>
-                </div><!-- .post -->
-            </section>
+                        <div class="entry">
+                            <?php the_excerpt(); ?>
+                        </div>
+                        <div class="post-meta">
+                            <a href="<?php the_permalink(); ?>#disqus_thread" class="comment-count">
+                                <?php echo $post->comment_count?>
+                                <?php echo ($post->comment_count==1?' comment':' comments');?>
+                            </a>
+                        </div>
+                    </div>
 
-<?php endif; ?>
+                    <?php endwhile; else: ?>
 
-        </div><!-- #content -->
+                    <div class="post">
+                        <p>Sorry, no posts matched your criteria.</p>
+                    </div>
+
+                    <?php endif; ?>
+
+                    <div id="nav-below">
+                        <?php next_posts_link('<div class="nav-previous">Older</div>') ?>
+                        <?php previous_posts_link('<div class="nav-next">Newer</div>') ?>
+                    </div>
+
+                </div>
+                <div id="sidebar" class="span3">
+                    <?php get_sidebar() ?>
+                </div>
+            </div>
 
 <?php get_footer() ?>
